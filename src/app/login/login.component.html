@@ -1,12 +1,13 @@
 <form>
 
     <label>Username: </label>
-    <input name="username" type="text" placeholder="Please enter your username">
+    <input [(ngModel)]="username" name="username" type="text" placeholder="Please enter your username">
 
     <br>
     <label>Password: </label>
-    <input name="password" type="password" placeholder="Please enter your password">
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Please enter your password">
 
     <br>
-    <input type="submit" value="login">
+    <h5>{{errorMessage}}</h5>
+    <input type="button" value="login" (click)="login()">
 </form>
