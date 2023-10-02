@@ -15,3 +15,7 @@ input {
 input [type="submit"] {
     background-color: rgb(34, 227, 34);
 }
+
+h5 {
+    color: red;
+}
