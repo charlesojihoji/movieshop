@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component( {
   selector: 'app-login',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 } )
 export class LoginComponent implements OnInit {
 
-  constructor () { }
+  constructor ( private _authService: AuthService, private router: Router ) { }
 
   username: string = ""
   password: string = ""
@@ -25,7 +27,15 @@ export class LoginComponent implements OnInit {
       this.errorMessage = "Password is empty";
     }
     else {
-      this.errorMessage = "Validate";
+      let response = this._authService.login( this.username, this.password );
+
+      if ( response == 404 ) {
+        this.errorMessage = "Invalid credentials";
+      }
+
+      if ( response = 200 ) {
+        this.router.navigate( [ 'home' ] );
+      }
     }
 
   }
