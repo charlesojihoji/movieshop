@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MovieComponent } from './movie/movie.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

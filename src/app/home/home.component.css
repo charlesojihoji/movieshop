@@ -1,0 +1,17 @@
+table,
+tr,
+th,
+td {
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+
+table {
+    width: 60%;
+    margin: auto;
+}
+
+th {
+    background-color: blue;
+    color: white
+}
